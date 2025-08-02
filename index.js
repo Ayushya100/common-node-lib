@@ -12,6 +12,7 @@ import {
   RequestContext
 } from './src/utils/index.js';
 import { errorHandler, verifyUserId, verifyScope, verifyRole, userContext, verifyToken } from './src/middlewares/index.js';
+import { Service } from './src/templates/index.js';
 import { exec, trxRunner } from './src/db/index.js';
 
 dotenv.config({
@@ -22,16 +23,17 @@ export {
   buildApiError,
   buildApiResponse,
   logger,
+  errorHandler,
+  Service,
+  exec,
   convertIdToPrettyString,
   convertPrettyStringToId,
   convertToNativeTimeZone,
   RequestContext,
-  errorHandler,
   verifyUserId,
   verifyScope,
   verifyRole,
+  trxRunner,
   userContext,
-  verifyToken,
-  exec,
-  trxRunner
+  verifyToken
 };
